@@ -1,4 +1,5 @@
 require 'active_support/dependencies'
+require 'active_record'
 
 Dir[File.expand_path("../../app/**/*", __FILE__)].each do |path|
   next unless File.directory?(path)
