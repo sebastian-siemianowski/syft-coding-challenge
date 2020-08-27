@@ -7,7 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails', '~> 6.0.2'
 gem 'money-rails', '~>1.12'
 
-gem 'pg'
+gem 'pg', '~> 1.2', '>= 1.2.3'
 gem 'puma', '~> 4.3.4'
 
 group :development do
@@ -22,7 +22,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop'
 end
 

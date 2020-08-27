@@ -1,14 +1,15 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   port: 5432
 
 development:
   <<: *default
-  database: syft_coding_challenge
+  database: syft_coding_challenge_development
 
 test:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL") { 'postgresql://localhost/syft_coding_challenge' } %>
+  database: syft_coding_challenge_test
   pool: 15
