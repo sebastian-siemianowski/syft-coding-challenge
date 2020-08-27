@@ -1,24 +1,16 @@
-# README
+This project operates on ruby 2.7.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* to install run 2.7.1 run the following command
+* rbenv install 2.7.1
 
-Things you may want to cover:
+Once that is done run the following command
+* bundle install
 
-* Ruby version
+This project requires postgres database running
+* this can be achieved by installation with brew library
 
-* System dependencies
+In the spec/services folder you will find checkout_spec.rb
+* Inside you will find three scenarios relating to the coding challenge
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the specs by running the following command that will create a test database for you
+* rspec
