@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Basket
   attr_accessor :items, :basket_total
 
@@ -8,6 +10,7 @@ class Basket
 
   def count_product_items_by_code(code)
     return 0 if items.blank?
+
     items.select { |item| item.product_code == code }.count
   end
 

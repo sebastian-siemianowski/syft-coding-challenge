@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module PromotionalRules
   class LavenderHearts
     attr_accessor :basket_total, :basket
 
-    LAVENDER_HEARTS_CODE = "001"
+    LAVENDER_HEARTS_CODE = '001'
 
     def initialize(basket)
       @basket = basket

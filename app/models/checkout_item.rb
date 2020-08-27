@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CheckoutItem
   attr_reader :price, :price_cents, :product_code, :item_name
   attr_accessor :promotional_price, :promotional_price_cents
