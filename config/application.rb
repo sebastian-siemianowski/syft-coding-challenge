@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails'
@@ -23,6 +25,18 @@ module SyftCodingChalange
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+
+    config.autoload_paths += ["#{config.root}/app/promotional_rules"]
+    config.eager_load_paths += ["#{config.root}/app/promotional_rules"]
+
+    config.autoload_paths += ["#{config.root}/app/services"]
+    config.eager_load_paths += ["#{config.root}/app/services"]
+
+    require "#{Rails.root}/app/promotional_rules/lavender_hearts.rb"
+    require "#{Rails.root}/app/promotional_rules/over60.rb"
+    require "#{Rails.root}/app/services/checkout.rb"
+
+    ENV['DEFAULT_CURRENCY'] || 'GBP'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
