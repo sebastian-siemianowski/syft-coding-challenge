@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
@@ -10,11 +12,11 @@ RSpec.describe Item, type: :model do
 
   context 'when testing items stored in db' do
     context 'when testing Lavender heart' do
-      subject(:selected_item){ Item.find_by(product_code: '001') }
+      subject(:selected_item) { Item.find_by(product_code: '001') }
 
-      let(:expected_product_code){ '001' }
-      let(:expected_name){ 'Lavender heart' }
-      let(:expected_price){ '9.25' }
+      let(:expected_product_code) { '001' }
+      let(:expected_name) { 'Lavender heart' }
+      let(:expected_price) { '9.25' }
 
       it { is_expected.to monetize(:price).with_currency(:gbp) }
 
@@ -31,11 +33,11 @@ RSpec.describe Item, type: :model do
       end
     end
     context 'when testing Personalised cufflinks' do
-      subject(:selected_item){ Item.find_by(product_code: '002') }
+      subject(:selected_item) { Item.find_by(product_code: '002') }
 
-      let(:expected_product_code){ '002' }
-      let(:expected_name){ 'Personalised cufflinks' }
-      let(:expected_price){ '45.00' }
+      let(:expected_product_code) { '002' }
+      let(:expected_name) { 'Personalised cufflinks' }
+      let(:expected_price) { '45.00' }
 
       it { is_expected.to monetize(:price).with_currency(:gbp) }
 
@@ -53,11 +55,11 @@ RSpec.describe Item, type: :model do
     end
 
     context 'when testing Kids T-shirt' do
-      subject(:selected_item){ Item.find_by(product_code: '003') }
+      subject(:selected_item) { Item.find_by(product_code: '003') }
 
-      let(:expected_product_code){ '003' }
-      let(:expected_name){ 'Kids T-shirt' }
-      let(:expected_price){ '19.95' }
+      let(:expected_product_code) { '003' }
+      let(:expected_name) { 'Kids T-shirt' }
+      let(:expected_price) { '19.95' }
 
       it { is_expected.to monetize(:price).with_currency(:gbp) }
 
