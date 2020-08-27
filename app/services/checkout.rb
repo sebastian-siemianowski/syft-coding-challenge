@@ -26,6 +26,6 @@ class Checkout
       rule.new(basket).apply
     end
 
-    basket.basket_total.format
+    basket.basket_total.round.format
   end
 end

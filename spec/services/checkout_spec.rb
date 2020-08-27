@@ -40,7 +40,7 @@ RSpec.describe Checkout do
     # Basket: 001,002,001,003
     # Total price expected: £73.76
 
-    xit 'returns correct price' do
+    it 'returns correct price' do
       co = Checkout.new(promotional_rules)
       co.scan(lavender_heart_item) # item 001
       co.scan(personalised_cufflinks) # item 002
